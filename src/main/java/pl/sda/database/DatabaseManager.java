@@ -1,5 +1,13 @@
 package pl.sda.database;
 
-public class DatabaseManager {
+import org.hibernate.cfg.Configuration;
 
+public class DatabaseManager {
+//        private static final DatabaseManager databaseManager = new Configuration().configure().buildSessionFactory();
+//        private DatabaseManager(){
+//        }
+//
+//    public static DatabaseManager getDatabaseManager() {
+//        return databaseManager;
+//    }
 }
