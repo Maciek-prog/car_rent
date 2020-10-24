@@ -1,11 +1,27 @@
 package pl.sda.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="Car")
+
 public class Car {
+    @Id
+    @Column(name="id")
+    @GeneratedValue(generator = "carSeq")
+    @GenericGenerator(name="carSeq", strategy="increment")
     private int id;
+    @Column
     private String marka;
+    @Column
     private String model;
+    @Column
     private String color;
+    @Column
     private String nr_rejestracyjny;
+    @Column
     private boolean car_condition;
 
     public Car(int id, String marka, String model, String color, String nr_rejestracyjny, boolean car_condition) {
