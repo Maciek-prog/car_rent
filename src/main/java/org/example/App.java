@@ -13,9 +13,18 @@ public class App {
         CarDao carDao = new CarDao();
         Customers customers = new Customers(1,"Mariusz", "Kowalski");
         Customers customers1 = new Customers(2,"Lucek", "Mieczewski");
+        Customers customers2 = new Customers(3,"Marek", "Klimczak");
+        Customers customers3 = new Customers(4,"Kacper", "Kieczewski");
         customersDao.add(customers);
         customersDao.add(customers1);
-//        Car car = new Car(1,)
+        customersDao.add(customers2);
+        customersDao.add(customers3);
+        Car car = new Car(1,"Ford","Mustang", "Red", "RC 27435",true);
+        Car car1 = new Car(2,"Skoda","Octavia","Blue","RX 89612",false);
+
+        carDao.add(car);
+        carDao.add(car1);
+
 
     }
 }
