@@ -1,8 +1,20 @@
 package pl.sda.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="Customers")
 public class Customers {
+    @Id
+    @Column(name="id")
+    @GeneratedValue(generator = "customersSeq")
+    @GenericGenerator(name="customersSeq", strategy="increment")
     private int id;
+    @Column
     private String firstName;
+    @Column
     private String lastName;
 
     public Customers(int id, String firstName, String lastName) {
