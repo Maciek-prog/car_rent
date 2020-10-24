@@ -6,13 +6,23 @@ public class Car {
     private String model;
     private String color;
     private String nr_rejestracyjny;
+    private boolean car_condition;
 
-    public Car(int id, String marka, String model, String color, String nr_rejestracyjny) {
+    public Car(int id, String marka, String model, String color, String nr_rejestracyjny, boolean car_condition) {
         this.id = id;
         this.marka = marka;
         this.model = model;
         this.color = color;
         this.nr_rejestracyjny = nr_rejestracyjny;
+        this.car_condition = car_condition;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getMarka() {
@@ -47,6 +57,14 @@ public class Car {
         this.nr_rejestracyjny = nr_rejestracyjny;
     }
 
+    public boolean isCar_condition() {
+        return car_condition;
+    }
+
+    public void setCar_condition(boolean car_condition) {
+        this.car_condition = car_condition;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
@@ -55,6 +73,7 @@ public class Car {
                 ", model='" + model + '\'' +
                 ", color='" + color + '\'' +
                 ", nr_rejestracyjny='" + nr_rejestracyjny + '\'' +
+                ", car_condition=" + car_condition +
                 '}';
     }
 
