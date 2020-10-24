@@ -15,6 +15,7 @@ public class App {
         Customers customers1 = new Customers(2,"Lucek", "Mieczewski");
         customersDao.add(customers);
         customersDao.add(customers1);
+//        Car car = new Car(1,)
 
     }
 }
