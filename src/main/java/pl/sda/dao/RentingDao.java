@@ -1,4 +1,10 @@
 package pl.sda.dao;
 
-public class RentingDao {
+import pl.sda.model.Customers;
+import pl.sda.model.Renting;
+
+public class RentingDao extends AbstractDao<Renting>{
+    public RentingDao() {
+        super(Renting.class);
+    }
 }
