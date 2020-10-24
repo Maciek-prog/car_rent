@@ -21,10 +21,11 @@ public class App {
         customersDao.add(customers3);
         Car car = new Car(1,"Ford","Mustang", "Red", "RC 27435",true);
         Car car1 = new Car(2,"Skoda","Octavia","Blue","RX 89612",false);
+        Car car2 = new Car(3,"volkswagen","Lupo","Blue","PCT 23124",true);
 
         carDao.add(car);
         carDao.add(car1);
-
+        carDao.add(car2);
 
     }
 }
