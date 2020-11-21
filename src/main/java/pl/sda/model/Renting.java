@@ -19,6 +19,8 @@ public class Renting {
     private long rent_date;
     @Column
     private long expiring_date;
+//    @ManyToOne(mappedBy="car")
+//    private Set<Items> item;
 
     public Renting(int id_customers, int id_car, long rent_date, long expiring_date) {
         this.id_customers = id_customers;
