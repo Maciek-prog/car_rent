@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 import javax.imageio.spi.ServiceRegistry;
 
 public class SessionProvider {
-//    private static SessionFactory sessionFactory;
+    //    private static SessionFactory sessionFactory;
 //    private static ServiceRegistry serviceRegistry;
 //
 //    public static SessionFactory createSessionFactory() {
