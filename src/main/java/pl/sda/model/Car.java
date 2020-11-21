@@ -3,15 +3,17 @@ package pl.sda.model;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
-@Entity
-@Table(name="Car")
+@Entity(name = "cars")
+@Table(name = "Car")
 
 public class Car {
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     @GeneratedValue(generator = "carSeq")
-    @GenericGenerator(name="carSeq", strategy="increment")
+    @GenericGenerator(name = "carSeq", strategy = "increment")
     private int id;
     @Column
     private String marka;
@@ -23,6 +25,8 @@ public class Car {
     private String nr_rejestracyjny;
     @Column
     private boolean car_condition;
+    @ManyToOne
+    private Set<Renting> rents = new HashSet<>();
 
     public Car(int id, String marka, String model, String color, String nr_rejestracyjny, boolean car_condition) {
         this.id = id;

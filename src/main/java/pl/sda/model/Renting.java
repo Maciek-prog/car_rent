@@ -3,24 +3,26 @@ package pl.sda.model;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
-@Entity
-@Table(name="Renting")
+@Entity(name = "rents")
+@Table(name = "Renting")
 public class Renting {
     @Id
-    @Column(name="id_customers")
+    @Column(name = "id_customers")
     @GeneratedValue(generator = "rentingSeq")
-    @GenericGenerator(name="rentingSeq", strategy="increment")
+    @GenericGenerator(name = "rentingSeq", strategy = "increment")
     private int id_customers;
     @Id
-    @Column(name="id_car")
+    @Column(name = "id_car")
     private int id_car;
     @Column
     private long rent_date;
     @Column
     private long expiring_date;
-//    @ManyToOne(mappedBy="car")
-//    private Set<Items> item;
+    @ManyToOne
+    private Set<Car> cars = new HashSet<>();
 
     public Renting(int id_customers, int id_car, long rent_date, long expiring_date) {
         this.id_customers = id_customers;
